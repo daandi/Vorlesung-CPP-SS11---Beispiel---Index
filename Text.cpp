@@ -9,7 +9,6 @@
 
 using namespace std;
 
-
 // Constructor
 Text::Text() {
 }
@@ -75,7 +74,7 @@ void Text::find(wstring wortString) {
         vector<int>::iterator i;
         
         for (i = v.begin() ;i != v.end(); i++) {
-            wcout << "Gefunden an Position ->   " << * i << L":   ";
+            wcout << wortString <<": gefunden an Position ->   " << * i << L":   ";
             printConcordance(* i, 3);
         }
         
@@ -85,8 +84,6 @@ void Text::find(wstring wortString) {
         cout << name;
         wcout << L" nicht enthalten."<< endl;
     }
-   
-    
 }
 
 void Text::printConcordance(int textPosition, int windowSize) {
@@ -106,7 +103,7 @@ void Text::printConcordance(int textPosition, int windowSize) {
             wcout << text.at(begin).asString() << " ";
         }
         else {
-            wcout << L" >" << text.at(begin).asString() << L"< ";
+            wcout << L"\t>" << text.at(begin).asString() << L"<\t";
         }
         begin++;
     }

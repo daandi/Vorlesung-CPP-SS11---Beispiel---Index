@@ -25,5 +25,7 @@ int main(int argc, char** argv) {
     
     a.find(L"und");
     
+    a.find(L"der");
+    
 }
 
