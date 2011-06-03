@@ -24,8 +24,10 @@ public:
     Text(std::string, const std::wstring);
     void printOnTerminal();
     std::vector<Wort> getText();
+    std::string getName();
     Text & operator=(Text);
-    void find(std::wstring);
+    bool find(std::wstring);
+    void findAndPrint(std::wstring);
     
 
 private:

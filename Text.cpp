@@ -68,7 +68,7 @@ void Text::buildPositionsMap(vector<Wort> & words) {
     
 }
 
-void Text::find(wstring wortString) {
+void Text::findAndPrint(wstring wortString) {
     if( wordPositions.find(wortString) != wordPositions.end()) {
         vector<int> v = wordPositions.at(wortString);
         vector<int>::iterator i;
@@ -85,6 +85,20 @@ void Text::find(wstring wortString) {
         wcout << L" nicht enthalten."<< endl;
     }
 }
+
+bool Text::find(wstring wortString) {
+    if( wordPositions.find(wortString) != wordPositions.end()) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+string Text::getName() {
+    return this -> name;
+}
+
 
 void Text::printConcordance(int textPosition, int windowSize) {
     int begin   = textPosition - windowSize;

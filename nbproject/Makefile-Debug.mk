@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/Wort.o \
+	${OBJECTDIR}/Index.o \
 	${OBJECTDIR}/Text.o
 
 
@@ -72,6 +73,11 @@ ${OBJECTDIR}/Wort.o: Wort.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Wort.o Wort.cpp
+
+${OBJECTDIR}/Index.o: Index.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Index.o Index.cpp
 
 ${OBJECTDIR}/Text.o: Text.cpp 
 	${MKDIR} -p ${OBJECTDIR}

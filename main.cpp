@@ -7,7 +7,7 @@
 
 
 #include <iostream>
-#include "Text.h"
+#include "Index.h"
 
 using namespace std;
 
@@ -18,14 +18,19 @@ int main(int argc, char** argv) {
     
     setlocale(LC_ALL, "");
     
+    Index myIndex;
+    
     Text a = Text("test.txt");
-    a.printOnTerminal();
     Text b = Text("String als Text", L"Hallo, hier ein Test.");
-    b.printOnTerminal();
     
-    a.find(L"und");
+    myIndex.add(a);
+    myIndex.add(b);
     
-    a.find(L"der");
+    myIndex.find(L"ein");
+    myIndex.find(L"der");
+    
+    
+
     
 }
 

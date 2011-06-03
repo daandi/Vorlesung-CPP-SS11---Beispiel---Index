@@ -12,6 +12,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Index.cpp</itemPath>
+      <itemPath>Index.h</itemPath>
       <itemPath>Text.cpp</itemPath>
       <itemPath>Text.h</itemPath>
       <itemPath>Wort.cpp</itemPath>
