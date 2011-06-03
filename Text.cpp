@@ -74,7 +74,7 @@ void Text::findAndPrint(wstring wortString) {
         vector<int>::iterator i;
         
         for (i = v.begin() ;i != v.end(); i++) {
-            wcout << wortString <<": gefunden an Position ->   " << * i << L":   ";
+            wcout << L"\t" << wortString <<": gefunden an Position ->   " << * i << L":   ";
             printConcordance(* i, 3);
         }
         
@@ -144,5 +144,3 @@ void Text::printOnTerminal() {
     
     wcout << endl << endl;
 }
-
-

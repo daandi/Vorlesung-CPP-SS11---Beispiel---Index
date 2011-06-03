@@ -21,7 +21,7 @@ bool Index::find(wstring wortString) {
     
     for (i = texts.begin(); i != texts.end(); i++) {
         if (i ->find(wortString) ) {
-            cout << "Gefunden in Text:" << i->getName() << endl;
+            cout << endl << "Gefunden in Text: " << i->getName() << endl;
             i->findAndPrint(wortString);
         }
     

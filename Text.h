@@ -38,7 +38,7 @@ private:
     void readWordsFromString( std::wstring &);
     void readWordsFromStream( std::wistream &);
     void buildPositionsMap(std::vector<Wort> &);
-    void printConcordance(int,int);
+    void printConcordance(int, int);
 
 };
 

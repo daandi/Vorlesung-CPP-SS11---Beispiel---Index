@@ -22,9 +22,11 @@ int main(int argc, char** argv) {
     
     Text a = Text("test.txt");
     Text b = Text("String als Text", L"Hallo, hier ein Test.");
+    Text c = Text("String als Text 2", L"Ist das denn nötig?");
     
     myIndex.add(a);
     myIndex.add(b);
+    myIndex.add(c);
     
     myIndex.find(L"ein");
     myIndex.find(L"der");
