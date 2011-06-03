@@ -1,4 +1,4 @@
 Dieses Projekt realisiert einen Index in C++.
-Hauptaugenmerkt liegt nicht auf Performanz oder Speicherbedarf sondern, darauf dass es mit den Standardklasssen realsierbar und leicht nachvollziehbar bleibt.
+Hauptaugenmerkt liegt nicht auf Performanz oder Speicherbedarf, sondern darauf, dass es mit den Standardklasssen realsierbar und leicht nachvollziehbar bleibt.
 
 Das Programm entstand für die Sommervorlesung "Höhere Programmierung in der Computerlinguistik mit C++" (http://www.cis.uni-muenchen.de/kurse/ss_11/C++/) des Centrums für Informations- und Sprachverarbeitung. (http://www.cis.uni-muenchen.de).
