@@ -18,13 +18,19 @@ void Index::add(Text t) {
 
 bool Index::find(wstring wortString) {
     vector<Text>::iterator i;
+ 
+    bool nicht_im_index = true;
     
     for (i = texts.begin(); i != texts.end(); i++) {
         if (i ->find(wortString) ) {
             cout << endl << "Gefunden in Text: " << i->getName() << endl;
             i->findAndPrint(wortString);
+            nicht_im_index = false;
         }
     
     }
+    
+    if ( nicht_im_index) {
+        wcout << endl << wortString << L": Nicht im Index!" << endl << endl;
+    }
 }
-

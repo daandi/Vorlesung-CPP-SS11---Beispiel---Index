@@ -1,14 +1,46 @@
-Unicode [ˈjuːnɪkoʊd] ist ein internationaler Standard, in dem langfristig für jedes sinntragende Schriftzeichen oder Textelement aller bekannten Schriftkulturen und Zeichensysteme ein digitaler Code festgelegt wird. Ziel ist es, die Verwendung unterschiedlicher und inkompatibler Kodierungen in verschiedenen Ländern oder Kulturkreisen zu beseitigen. Unicode wird ständig um Zeichen weiterer Schriftsysteme ergänzt. ISO 10646 ist die von ISO verwendete, praktisch bedeutungsgleiche Bezeichnung des Unicode-Zeichensatzes; er wird dort als Universal Character Set (UCS) bezeichnet.
-Herkömmliche Computer-Zeichencodes umfassen nur einen begrenzten Vorrat an Zeichen, bei westlichen Zeichenkodierungen liegt diese Grenze meistens bei 128 (7 Bit) Codepositionen – wie bei dem sehr bekannten ASCII-Standard – oder 256 (8 Bit) Positionen, wie z. B. bei ISO 8859-1 (auch als Latin-1 bekannt) oder EBCDIC. Davon sind nach Abzug der Steuerzeichen 95 Elemente bei ASCII und 191 Elemente bei den 8-Bit ISO-Zeichensätzen als Schrift- und Sonderzeichen darstellbar. Diese Zeichenkodierungen erlauben die gleichzeitige Darstellung nur weniger Sprachen im selben Text, wenn man sich nicht damit behilft, in einem Text verschiedene Schriften mit unterschiedlichen Zeichensätzen zu verwenden. Das behinderte den internationalen Datenaustausch in den 1980er und 1990er Jahren erheblich.
-ISO 2022[1] war ein erster Versuch, mehrere Sprachen mit nur einer Zeichenkodierung darstellen zu können. Die Kodierung benutzt Escapesequenzen, um zwischen verschiedenen Zeichensätzen (z. B. zwischen Latin-1 und Latin-2) wechseln zu können. Das System setzte sich jedoch nur in Ostasien durch.[2]
-Joseph D. Becker von Xerox schrieb 1988 den ersten Entwurf für einen universalen Zeichensatz. Dieser 16-bittige Zeichensatz sollte nach den ursprünglichen Plänen lediglich die Zeichen moderner Sprachen kodieren:
-“Unicode gives higher priority to ensuring utility for the future than to preserving past antiquities. Unicode aims in the first instance at the characters published in modern text (e.g. in the union of all newspapers and magazines printed in the world in 1988), whose number is undoubtedly far below 214 = 16,384. Beyond those modern-use characters, all others may be defined to be obsolete or rare, these are better candidates for private-use registration than for congesting the public list of generally-useful Unicodes.”
-„Unicode stellt einen höheren Anspruch darauf die Verwendbarkeit für die Zukunft sicherzustellen, statt vergangene Altertümlichkeiten zu erhalten. Unicode zielt in erster Linie auf alle Zeichen, die in modernen Texten veröffentlicht werden (etwa in allen Zeitungen und Zeitschriften der Welt des Jahres 1988), deren Anzahl zweifelsfrei weit unter 214 = 16.384 liegt. Weitere Zeichen, die über diese heutigen Zeichen hinaus gehen, können als veraltet oder selten erachtet werden, diese sollten besser über einen privaten Modus registriert werden, statt die öffentliche Liste der allgemein nützlichen Unicodes zu überfüllen.“
-– Joseph D. Becker[3]
-1991 wurde nach mehrjähriger Entwicklungszeit die Version 1.0.0 des Unicode-Standards veröffentlicht, die damals nur die europäischen, nahöstlichen und indischen Schriften kodierte.[4] Erst acht Monate später, nachdem die Han-Vereinheitlichung abgeschlossen war, erschien Version 1.0.1, die erstmals ostasiatische Zeichen kodierte. Im Juni 1993 schließlich wurde der Unicode-Standard mit ISO 10646 synchronisiert, dafür wurden neue Zeichen hinzugefügt, aber auch das Tibetische aus dem Standard entfernt,[5] da damals noch Zeichen und Blöcke ohne Probleme entfernt und verschoben werden durften.
-Drei Jahre später, im Juli 1996, erschien Unicode 2.0.0, fügte hebräische Zeichen sowie das in der vorherigen Version entfernte Tibetische hinzu und verschob die Hangul-Silben.[5] Unicode 2.1.0 fügte im Mai 1998 das Eurozeichen und einige weitere Zeichen hinzu, außerdem wurde das System der Planes (Ebenen) eingeführt, obwohl damals die einzigen Blöcke außerhalb der BMP (Basic Multilingual Plane) zwei private Nutzungsbereiche waren. Unicode 3.0.0 kodierte im September 1999 viele neue Schriftsysteme, beispielsweise das Thaana-Alphabet, das Singhalesische, die birmanische Schrift, die Ge’ez-Abugida, die Cherokee-Schrift, kanadische Silben, Ogam, germanische Runen, die Khmer-Schrift, die mongolische Schrift, Braille, Yi und erweiterte den Satz an chinesischen Schriftzeichen erheblich. Unicode 3.1.0 im März 2001 kodierte die altitalische Schrift, das gotische Alphabet, das Mormonen-Alphabet, Musiknoten und tausende neue chinesische Schriftzeichen in den neu geschaffenen Planes 1 und 2.[6] Unicode 3.2.0 fügte im März 2002 die philippinischen Schriften und weitere Zeichen hinzu.[7]
-Unicode 4.0.0 erschien April 2003. Neu waren die Limbu-Schrift, Tai Nüa, die Linearschrift B, die ugaritische Schrift, das Shaw-Alphabet, die Osmaniya-Schrift und kyprische Silben.[8] In Unicode 4.1.0 wurde im März 2005 Griechisch und Koptisch getrennt kodiert, außerdem wurde Tai Lü, die buginesische Schrift, das Glagolitische, Nuschuri, die Tifinagh-Schrift, Syloti Nagri, die altpersische Keilschrift und die Kharoshthi-Schrift hinzugefügt.[9] In Unicode 5.0.0 wurden im Juli 2006 weitere Schriftsysteme hinzugefügt, die Neuheiten sind N'Ko, die balinesische Schrift, die Phagspa-Schrift, die phönizische Schrift sowie sumerische Keilschrift.[10]
-Unicode 5.1.0 erschien April 2008 und kodiert 100.000 Zeichen. Wieder wurden viele neue Schriftsysteme kodiert, dazu zählt das Sundanesische, die Lepcha-Schrift, Ol Chiki, die Vai-Schrift, die Saurashtra-Schrift, Kayah Li, die Rejang-Schrift, die Cham-Schrift, die lykische Schrift, die karische Schrift sowie die lydische Schrift.[11]
-Version 5.2.0 ist im Oktober 2009 erschienen. Unter anderem wurde die CJK Unified Ideographs Extension C hinzugefügt. Außerdem wurden die Kapitel des Unicode-Buches aktualisiert.[12]
-Die neueste Version ist 6.0.0, welche im Oktober 2010 veröffentlicht wurde.[13]
-In den letzten Jahren erschienen neue Versionen meist im Frühjahr, wobei in der letzten Zeit jährlich etwa 1000 Zeichen neu aufgenommen wurden.
+Epsilon
+
+Epsilon
+Aussprache
+antik	[e]
+modern	[ɛ]
+Entsprechungen
+lateinisch	E
+kyrillisch	Е
+hebräisch	ה
+arabisch	ه
+Transkription
+Aus dem Antiken	e
+Aus dem Modernen	e
+Kodierung
+Majuskel
+Unicode-Nummer	U+0395
+Unicode-Name	GREEK CAPITAL LETTER EPSILON
+HTML	&#917;
+HTML-Entität	&Epsilon;
+Minuskel
+Unicode-Nummer	U+03B5
+Unicode-Name	GREEK SMALL LETTER EPSILON
+HTML	&#949;
+HTML-Entität	&epsilon;
+Das Epsilon (griechisches Neutrum Έψιλον, Majuskel Ε, Minuskel ε oder ϵ) ist der 5. Buchstabe des griechischen Alphabets und hat einen numerischen Wert von 5.
+Herkunft [Bearbeiten]
+
+Das Zeichen E kommt ursprünglich vom phönizischen Buchstaben „he“ und wurde von den Griechen für den Vokal „E“ verwendet. Der Name „e psilón“ (gr. ἔ ψιλόν) bedeutet „einfaches“ oder „entblößtes e“ (gegenüber der Buchstabenkombination „αι“, die seit der hellenistischen Zeit den gleichen Lautwert wie das ἔ ψιλόν hat).
+Verwendung [Bearbeiten]
+
+In der Mathematik dient ε zur Bezeichnung einer beliebig kleinen Zahl größer als null. Eine solche Zahl wird in der Analysis bei der Definition von Grenzwerten wie Supremum und Infimum benötigt. Dieses Gebiet wird deshalb auch als „Epsilontik“ bezeichnet.
+In der Mathematik beschreibt ε(x) eine Heaviside-Funktion.
+In der Mathematik steht ε für die numerische Exzentrizität.
+In der Geometrie verwendet man ε oftmals für einen kleinen Winkel.
+In der Tensorrechnung bezeichnet das kleine Epsilon das Levi-Civita-Symbol.
+In der Informatik bezeichnet das kleine Epsilon das leere Wort.
+In der Physik bezeichnet das kleine Epsilon die Permittivität, die Leistungszahl und den Emissionsgrad.
+In der Astronomie bezeichnet das kleine Epsilon die Schiefe der Ekliptik.
+In der Technischen Mechanik bezeichnet das kleine Epsilon die Dehnung.
+Bei Verbrennungsmotoren bezeichnet das kleine Epsilon das Verdichtungsverhältnis.
+In der Chemie bezeichnet das kleine Epsilon den Extinktionskoeffizienten.
+In der Volkswirtschaftslehre verwendet man ε oftmals für die Einkommenselastizität sowie für den realen Wechselkurs, definiert durch: ε = nomineller Wechselkurs * Preisniveau im Inland / Preisniveau im Ausland.
+als Zeichen „3“ (umgekehrtes Epsilon) Konformitätszeichen für die Übereinstimmung mit der EG-Richtlinie „Richtlinie 75/324/EWG des Rates“ – Angleichung der Rechtsvorschriften der Mitgliedsstaaten über Aerosolpackungen aus 1975, geändert 1980 und 1994. Siehe auch technische Regel Druckgas TRG300 der BRD über Druckgaspackungen und Konformitätserklärung des Herstellers von Druckgeräten mit mehr als geringem Druckgefahrenpotential (Zeichen CE).
+auf Hochdruck-Gasflaschen – in die Stahl-Schulter eingestempelt – ein europäischer Konformitätshinweis, der es erleichtert, dass in einem EU-Staat geprüfte etwa Tauch- oder Sauerstoffflaschen auch in einem anderen EU-Land gefüllt werden, gemäß Normen, die 2006 verbindlich geworden sind
+als „Ex“ (E in Form eines großen kleinen Epsilons) im umschriebenen Sechseck für Geräte, tauglich für explosionsgefährliche Umgebung

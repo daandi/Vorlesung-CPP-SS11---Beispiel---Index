@@ -13,28 +13,51 @@ using namespace std;
 Text::Text() {
 }
 
-
+/*
+ Text aus einer Datei erstellen.
+ */
 Text::Text(string filename) {
     this -> name = filename;
     wifstream file(filename.c_str());
     readWordsfromFile(file) ;
 }
 
+/*
+ Text aus einem String erstellen. Name des Textes ist das erste Argument.
+ */
 Text::Text(string name, wstring textAsString) {
     this -> name = name;
     readWordsFromString(textAsString);
     
 }
 
+/*
+ Wörter aus eine FileStream lesen.
+ */
+
 void Text::readWordsfromFile(wifstream & file) {
-    readWordsFromStream(file);
+    file.imbue(locale("de_DE.UTF-8"));
+    if (file.good()) {
+        readWordsFromStream(file);
+    }
+    else {
+        wcout << "Problem mit der Datei" << endl;
+    }
 }
+
+/*
+ Wörter aus einem StringStream lesen.
+ */
 
 void Text::readWordsFromString(wstring & textString) {
     wistringstream stringAsStream(textString);
     wstring wortString;
     readWordsFromStream(stringAsStream);
 }
+
+/*
+ Wörter von einem Stream lesen
+ */
 
 void Text::readWordsFromStream(wistream & inStream) {
     wstring wortString;
@@ -44,6 +67,9 @@ void Text::readWordsFromStream(wistream & inStream) {
     buildPositionsMap(text);
 }
 
+/*
+ Container Map mit Wortpositionen für Konkordanz erstellen.
+ */
 void Text::buildPositionsMap(vector<Wort> & words) {
     vector<Wort>::iterator i; 
     
@@ -67,6 +93,10 @@ void Text::buildPositionsMap(vector<Wort> & words) {
     }
     
 }
+
+/*
+ Wort innerhalb des Textes finden. und Position ausgeben.
+ */
 
 void Text::findAndPrint(wstring wortString) {
     if( wordPositions.find(wortString) != wordPositions.end()) {
@@ -99,7 +129,9 @@ string Text::getName() {
     return this -> name;
 }
 
-
+/*
+ Konkordanz drucken.
+ */
 void Text::printConcordance(int textPosition, int windowSize) {
     int begin   = textPosition - windowSize;
     int end     = textPosition + windowSize;
@@ -131,7 +163,9 @@ Text &  Text::operator=(Text other) {
     return * this;
 }
 
-
+/*
+ Ganzen Text auf Terminal ausgeben
+ */
 void Text::printOnTerminal() {
     
     cout << "Text: \"" << name << "\"" << endl;

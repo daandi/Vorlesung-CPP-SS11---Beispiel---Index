@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=VorlesungOO2
+PROJECTNAME=Vorlesung-CPP-SS11---Beispiel---Index
 
 # Active Configuration
 DEFAULTCONF=Debug

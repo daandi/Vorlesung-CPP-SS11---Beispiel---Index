@@ -7,8 +7,7 @@
 
 #ifndef INDEX_H
 #define	INDEX_H
-
-#include "Text.h";
+#include "Text.h"
 
 class Index {
 public:
