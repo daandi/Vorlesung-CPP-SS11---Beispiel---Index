@@ -51,7 +51,6 @@ void Text::readWordsfromFile(wifstream & file) {
 
 void Text::readWordsFromString(wstring & textString) {
     wistringstream stringAsStream(textString);
-    wstring wortString;
     readWordsFromStream(stringAsStream);
 }
 
@@ -74,7 +73,7 @@ void Text::buildPositionsMap(vector<Wort> & words) {
     vector<Wort>::iterator i; 
     
     for ( i= words.begin(); i != words.end(); i++ ) {
-        wstring wortString = i ->asString();
+        wstring wortString = i -> asString();
         int iteratorPos =  distance(words.begin(),i);
         
         // Es gibt schon einen Eintrag
@@ -87,7 +86,7 @@ void Text::buildPositionsMap(vector<Wort> & words) {
             vector<int> v;
             v.push_back(iteratorPos);
             
-            wordPositions.insert( map< wstring,vector<int> >::value_type(wortString,v) );
+            wordPositions.insert( unordered_map< wstring,vector<int> >::value_type(wortString,v) );
         }
         
     }

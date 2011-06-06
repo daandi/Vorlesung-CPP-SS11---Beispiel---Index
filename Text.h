@@ -9,7 +9,7 @@
 #define	TEXT_H
 
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -33,7 +33,7 @@ public:
 private:
     std::string name;
     std::vector<Wort> text;
-    std::map< std::wstring, std::vector<int> > wordPositions;
+    std::unordered_map< std::wstring, std::vector<int> > wordPositions;
     void readWordsfromFile( std::wifstream &);
     void readWordsFromString( std::wstring &);
     void readWordsFromStream( std::wistream &);

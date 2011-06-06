@@ -12,10 +12,16 @@ using namespace std;
 Index::Index() {
 }
 
+/*
+ Text zum Index hinzufügen.
+ */
 void Index::add(Text t) {
     texts.push_back(t);
 }
 
+/*
+ Token in Text finden.
+ */
 bool Index::find(wstring wortString) {
     vector<Text>::iterator i;
  
