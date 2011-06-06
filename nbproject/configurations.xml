@@ -40,6 +40,9 @@
         <compilerSet>default</compilerSet>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <commandLine>-std=c++0x</commandLine>
+        </ccTool>
       </compileType>
     </conf>
     <conf name="Release" type="1">

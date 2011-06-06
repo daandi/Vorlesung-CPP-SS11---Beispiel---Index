@@ -86,11 +86,9 @@ void Text::buildPositionsMap(vector<Wort> & words) {
             vector<int> v;
             v.push_back(iteratorPos);
             
-            wordPositions.insert( unordered_map< wstring,vector<int> >::value_type(wortString,v) );
+            wordPositions.insert( map< wstring,vector<int> >::value_type(wortString,v) );
         }
-        
-    }
-    
+    }  
 }
 
 /*
