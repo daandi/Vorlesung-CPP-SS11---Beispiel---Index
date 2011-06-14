@@ -17,7 +17,7 @@ Text::Text() {
  Text aus einer Datei erstellen.
  */
 Text::Text(string filename) {
-    this -> name = filename;
+    this -> name = string2wstring(filename);
     wifstream file(filename.c_str());
     readWordsfromFile(file) ;
 }
@@ -26,7 +26,7 @@ Text::Text(string filename) {
  Text aus einem String erstellen. Name des Textes ist das erste Argument.
  */
 Text::Text(string name, wstring textAsString) {
-    this -> name = name;
+    this -> name = string2wstring(name);
     readWordsFromString(textAsString);
     
 }
@@ -36,6 +36,7 @@ Text::Text(string name, wstring textAsString) {
  */
 
 void Text::readWordsfromFile(wifstream & file) {
+    // Zeile auf dem Mac auskommentieren.
     file.imbue(locale("de_DE.UTF-8"));
     if (file.good()) {
         readWordsFromStream(file);
@@ -108,7 +109,7 @@ void Text::findAndPrint(wstring wortString) {
     }
     else {
         wcout <<  L"Wort: " << wortString << L" ist in Text: ";
-        cout << name;
+        wcout << name;
         wcout << L" nicht enthalten."<< endl;
     }
 }
@@ -122,7 +123,7 @@ bool Text::find(wstring wortString) {
     }
 }
 
-string Text::getName() {
+wstring Text::getName() {
     return this -> name;
 }
 
@@ -165,7 +166,7 @@ Text &  Text::operator=(Text other) {
  */
 void Text::printOnTerminal() {
     
-    cout << "Text: \"" << name << "\"" << endl;
+    wcout << L"Text: \"" << name << L"\"" << endl;
     
     vector<Wort>::iterator i = text.begin();
     while (i != text.end() ) {
@@ -174,4 +175,10 @@ void Text::printOnTerminal() {
     }
     
     wcout << endl << endl;
+}
+
+wstring Text::string2wstring(string s) {
+    wstring sWide(s.length(), L' ');
+    copy(s.begin(), s.end(), sWide.begin());
+    return L" ";
 }

@@ -29,7 +29,7 @@ bool Index::find(wstring wortString) {
     
     for (i = texts.begin(); i != texts.end(); i++) {
         if (i ->find(wortString) ) {
-            cout << endl << "Gefunden in Text: " << i->getName() << endl;
+            wcout << endl << L"Gefunden in Text: " << i->getName() << endl;
             i->findAndPrint(wortString);
             nicht_im_index = false;
         }
