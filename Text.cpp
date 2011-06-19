@@ -180,5 +180,5 @@ void Text::printOnTerminal() {
 wstring Text::string2wstring(string s) {
     wstring sWide(s.length(), L' ');
     copy(s.begin(), s.end(), sWide.begin());
-    return L" ";
+    return sWide;
 }
